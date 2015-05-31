@@ -4,7 +4,7 @@
 //********************************************************************
 package dealornodeal;
 
-public class caseValue {
+public class CaseValue {
 
     String[] cases = new String[26];
     String[] value = {"50c", "$1", "$2", "$5", "$10", "$20", "$50", "$100",
@@ -17,7 +17,7 @@ public class caseValue {
     private boolean casePicked;
     private boolean selectedCase;
 
-    public caseValue(int caseNum) throws Exception {
+    public CaseValue(int caseNum) throws Exception {
 
         if (caseNum < 0 || caseNum > 26) {
             throw new Exception("Case Number not found");

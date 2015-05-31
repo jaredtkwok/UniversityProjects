@@ -1,26 +1,29 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+//********************************************************************
+//  Project 50
+//  Author: Jared Kwok(1382534) and Mike Jiang(1240129)    
+//********************************************************************
 package dealornodeal;
 
+import dealornodeal.GUI.GameView;
+import dealornodeal.database.Database;
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author jhc5987
- */
-public class caseOpener implements ActionListener {
+public class CaseOpener implements ActionListener {
 
     private GameView  gui;
-
-    public caseOpener(GameView  thegui) {
+        private Database db;
+    private String player;
+    public CaseOpener(GameView  thegui) {
         this.gui = thegui;
+        db = new Database();
+              
     }
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -36,11 +39,15 @@ public class caseOpener implements ActionListener {
             gui.casesLeftDis.setText("| Cases Left: " + gui.casesLeft);
             gui.offerMultiplier++;
         } else {
-            openCase(action);
+            try {
+                openCase(action);
+            } catch (Exception ex) {
+                Logger.getLogger(CaseOpener.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
 
-    private void openCase(int i) {
+    private void openCase(int i) throws Exception {
         int n = i - 1;
         gui.caseButton[n].setText(null);
         gui.mgPanel.remove(gui.caseButton[n]);
@@ -58,19 +65,24 @@ public class caseOpener implements ActionListener {
         gui.bank.setOffer(gui.offerMultiplier, gui.cases, gui.bank.getOffer());
         if (gui.casesLeft == 19 || gui.casesLeft == 14 || gui.casesLeft == 10 || gui.casesLeft == 7 || gui.casesLeft <= 5) {
             if (gui.casesLeft == 0) {
+                db.connectDB(gui.playerName  , gui.bank.getOffer());
                 JOptionPane.showMessageDialog(null, "Congratulations "
                         + gui.playerName + "\nYou Have won\n " + gui.cases[gui.playerCase].getValue());
+                JOptionPane.showMessageDialog(null, db.getHighScores());
                 System.exit(0);
             }
             int selected = JOptionPane.showOptionDialog(null, "Your offer is: $"
                     + gui.bank.getOffer() + "\nDeal or No Deal?", "Deal or No Deal? (GUI)",
                     JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE,
                     null, gui.options, "Deal");
-
+                   
             if (selected == 0) {
+                db.connectDB(gui.playerName, gui.bank.getOffer());
                 JOptionPane.showMessageDialog(null, "Congratulations "
                         + gui.playerName + "\nYou Have won " + "\n $" + gui.bank.getOffer());
+                JOptionPane.showMessageDialog(null, db.getHighScores());
                 System.exit(0);
+                
             }
 
             gui.offerDisplay.setText("| Your offer was: $" + gui.bank.getOffer());

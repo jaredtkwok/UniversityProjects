@@ -1,0 +1,20 @@
+Fri Oct 24 16:46:25 NZDT 2014 : Apache Derby Network Server - 10.8.3.0 - (1405108) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Fri Oct 24 16:46:34 NZDT 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.3.0 - (1405108): instance a816c00e-0149-4043-2eb8-00001367b1da 
+on database directory G:\PDC\DealOrNoDeal123-2014-10-22\DealOrNoDeal123-2014-10-22\DealOrNoDeal123\DealOrNoDeal123\dond_db  with class loader sun.misc.Launcher$AppClassLoader@47858e 
+Loaded from file:/C:/Program%20Files%20(x86)/Java/jdk1.7.0_40/db/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_40-b43
+user.dir=C:\Program Files (x86)\Java\jdk1.7.0_40\db
+os.name=Windows 7
+os.arch=x86
+os.version=6.1
+derby.system.home=G:\PDC\DealOrNoDeal123-2014-10-22\DealOrNoDeal123-2014-10-22\DealOrNoDeal123\DealOrNoDeal123
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Oct 24 16:47:58 NZDT 2014: Shutting down Derby engine
+----------------------------------------------------------------
+Fri Oct 24 16:47:58 NZDT 2014:
+Shutting down instance a816c00e-0149-4043-2eb8-00001367b1da on database directory G:\PDC\DealOrNoDeal123-2014-10-22\DealOrNoDeal123-2014-10-22\DealOrNoDeal123\DealOrNoDeal123\dond_db with class loader sun.misc.Launcher$AppClassLoader@47858e 
+----------------------------------------------------------------

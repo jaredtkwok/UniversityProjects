@@ -5,14 +5,14 @@
 package dealornodeal;
 
 // Calculates the offer after certain amount of turns
-public class banker {
+public class Banker {
 
     private int offer = 0;
     private int total;
 
-    public banker() {
+    public Banker() {
     }
-    public void setOffer(int turn, caseValue[] cases, int offer) {
+    public void setOffer(int turn, CaseValue[] cases, int offer) {
         int count = 0;
         total =0;
         for (int i = 0; i < cases.length; i++) {

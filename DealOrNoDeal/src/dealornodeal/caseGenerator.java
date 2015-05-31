@@ -7,16 +7,16 @@ package dealornodeal;
 import java.util.Random;
 
 // Generates cases and shuffles the order
-public class caseGenerator{
+public class CaseGenerator{
 
-    private caseValue[] caseVal = new caseValue[26];
+    private CaseValue[] caseVal = new CaseValue[26];
 
-    public caseGenerator() {
+    public CaseGenerator() {
 
         Random ranNum = new Random();
         for (int i = 0; i < caseVal.length; i++) {
             try {
-                caseVal[i] = new caseValue(i);
+                caseVal[i] = new CaseValue(i);
             } catch (Exception ex) {
                 System.out.println("Error");
             }
@@ -24,7 +24,7 @@ public class caseGenerator{
         try {
             for (int i = 25; i >= 0; i--) {
                 int selectIndex = ranNum.nextInt(i + 1);
-                caseValue temp = caseVal[i];
+                CaseValue temp = caseVal[i];
                 caseVal[i] = caseVal[selectIndex];
                 caseVal[selectIndex] = temp;
             }
@@ -33,12 +33,12 @@ public class caseGenerator{
         }
     }
     
-    public caseValue pickCase(int c) {
+    public CaseValue pickCase(int c) {
         caseVal[c].setIsOpen(true);
         return caseVal[c];
     }
     
-    public caseValue showCase(int c){
+    public CaseValue showCase(int c){
         return caseVal[c];    
     }
     

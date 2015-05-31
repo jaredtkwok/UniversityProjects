@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Sun Oct 26 14:48:11 NZDT 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.0 - (1344872): instance a816c00e-0149-4a23-a75f-0000039757b0 
+on database directory C:\Users\Mikey\Desktop\Assignment GUI\DealOrNoDeal\dond_db  with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+Loaded from file:/C:/Users/Mikey/Desktop/JDB-2014-10-22/JDB/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_11-b12
+user.dir=C:\Users\Mikey\Desktop\Assignment GUI\DealOrNoDeal
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

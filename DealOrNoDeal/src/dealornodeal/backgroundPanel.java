@@ -9,9 +9,9 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JPanel;
 
-public class backgroundPanel extends JPanel{
+public class BackgroundPanel extends JPanel{
         Image img;
-    public backgroundPanel()
+    public BackgroundPanel()
     {     
         this.img = Toolkit.getDefaultToolkit().createImage("src/dealornodeal/Images/dollarBackground.jpg");
     }

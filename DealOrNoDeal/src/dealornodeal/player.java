@@ -5,11 +5,11 @@
 package dealornodeal;
 
 // Player profile
-public class player {
+public class Player {
     
     String name;
-    caseValue playerCase;
-    public player(String name) {
+    CaseValue playerCase;
+    public Player(String name) {
         if (name.compareTo("") == 0) {
             name = "Player";
         }

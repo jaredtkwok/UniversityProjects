@@ -4,15 +4,16 @@
 //********************************************************************
 package dealornodeal;
 
+import dealornodeal.GUI.GameView;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
-public class gameOptions implements ActionListener {
+public class GameOptions implements ActionListener {
 
     private GameView  gui;
 
-    public gameOptions(GameView  thegui) {       
+    public GameOptions(GameView  thegui) {       
         this.gui = thegui;
     }
 
